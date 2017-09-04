@@ -3,14 +3,9 @@ import Card from './Card'
 
 const Cards = (props) => {
   return (
-    <div className="container">
+    <div id="cards" className="container">
       <div className="row">
-        {props.data.map((data, index) => {
-          console.log(data, index);
-          return (
-            <Card data={data} key={index}/>
-          );
-        })}
+        {props.data.map((data, index) => <Card data={data} key={index}/>)}
       </div>
     </div>
   );

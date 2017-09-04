@@ -10406,6 +10406,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Hero__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Nav__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Footer__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Contact__ = __webpack_require__(232);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10422,20 +10423,43 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var appContainer = document.getElementById('app-container');
 
-var myCardArray = [{
+var appContainer = document.getElementById('app-container');
+var projectName = 'My Project';
+var heroData = {
+  content: 'This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.',
+  title: 'Welcome!'
+};
+var arrayOfCards = [{
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
   heading: 'Heading 1',
-  content: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
-  buttonText: 'View details »'
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
 }, {
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
   heading: 'Heading 2',
-  content: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
-  buttonText: 'View details »'
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
 }, {
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
   heading: 'Heading 3',
-  content: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
-  buttonText: 'View details »'
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
+}, {
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
+  heading: 'Heading 4',
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
+}, {
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
+  heading: 'Heading 5',
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
+}, {
+  buttonText: 'View details »',
+  content: 'Donec id elit non mi porta gravida.',
+  heading: 'Heading 6',
+  image: 'https://www.w3schools.com/howto/img_avatar.png'
 }];
 
 var App = function (_Component) {
@@ -10450,18 +10474,13 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      var projectName = 'My Project';
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
         'div',
         { className: 'container-flud' },
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Nav__["a" /* default */], { projectName: projectName }),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Hero__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'div',
-          null,
-          'BodyContainer Load Cards:',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Cards__["a" /* default */], { data: myCardArray })
-        ),
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Hero__["a" /* default */], { data: heroData }),
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Cards__["a" /* default */], { data: arrayOfCards }),
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Contact__["a" /* default */], { title: 'Contact Us' }),
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Footer__["a" /* default */], { projectName: projectName })
       );
     }
@@ -53798,10 +53817,10 @@ module.exports = ReactDOMInvalidARIAHook;
 var Nav = function Nav(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "nav",
-    { className: "navbar navbar-default" },
+    { id: "navbar", className: "navbar navbar-default" },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "div",
-      { className: "container-fluid" },
+      { className: "container" },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "navbar-header" },
@@ -53825,7 +53844,7 @@ var Nav = function Nav(props) {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { id: "navbar", className: "navbar-collapse collapse" },
+        { className: "navbar-collapse collapse" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "ul",
           { className: "nav navbar-nav" },
@@ -54123,64 +54142,41 @@ var Footer = function (_Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
+var Hero = function Hero(props) {
+  var _props$data = props.data,
+      content = _props$data.content,
+      title = _props$data.title;
 
-var Hero = function (_Component) {
-  _inherits(Hero, _Component);
-
-  function Hero() {
-    _classCallCheck(this, Hero);
-
-    return _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).apply(this, arguments));
-  }
-
-  _createClass(Hero, [{
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { id: "hero", className: "jumbotron" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      { className: "container" },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "h1",
+        null,
+        title
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "p",
+        null,
+        content
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "p",
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "jumbotron" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "container" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h1",
-              null,
-              "Hello, world!"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "p",
-              null,
-              "This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique."
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "p",
-              null,
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "a",
-                { className: "btn btn-primary btn-lg", href: "#", role: "button" },
-                "Learn more \xBB"
-              )
-            )
-          )
+          "a",
+          { className: "btn btn-primary btn-lg", href: "#", role: "button" },
+          "Learn more \xBB"
         )
-      );
-    }
-  }]);
-
-  return Hero;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+      )
+    )
+  );
+};
 
 /* harmony default export */ __webpack_exports__["a"] = (Hero);
 
@@ -54198,12 +54194,11 @@ var Hero = function (_Component) {
 var Cards = function Cards(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
-    { className: 'container' },
+    { id: 'cards', className: 'container' },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'row' },
       props.data.map(function (data, index) {
-        console.log(data, index);
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Card__["a" /* default */], { data: data, key: index });
       })
     )
@@ -54222,32 +54217,120 @@ var Cards = function Cards(props) {
 
 
 var Card = function Card(props) {
+  var _props$data = props.data,
+      heading = _props$data.heading,
+      content = _props$data.content,
+      buttonText = _props$data.buttonText,
+      image = _props$data.image;
+
+
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "div",
-    { className: "col-md-4" },
+    { id: "card", className: "col-md-4 card" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "img-responsive", src: image, alt: heading }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "h2",
-      null,
-      props.data.heading
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "p",
-      null,
-      props.data.content
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "p",
-      null,
+      "div",
+      { className: "container" },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "a",
-        { className: "btn btn-default", href: "#", role: "button" },
-        props.data.buttonText
+        "h4",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "b",
+          null,
+          heading
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "p",
+        null,
+        content
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "p",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "button",
+          null,
+          buttonText
+        )
       )
     )
   );
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Card);
+
+/***/ }),
+/* 232 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+var Contact = function Contact(props) {
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { id: "contact", className: "container" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "h3",
+      null,
+      props.title
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "form",
+      { onSubmit: handleSubmit },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "form-group" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "label",
+          null,
+          "Name:"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "name", className: "form-control", id: "name" })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "form-group" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "label",
+          null,
+          "Email address:"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "email", className: "form-control", id: "email" })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "form-group" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "label",
+          null,
+          "Message"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { type: "message", className: "form-control", id: "message" })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "button",
+        { type: "submit", className: "btn btn-default" },
+        "Submit"
+      )
+    )
+  );
+};
+
+var handleSubmit = function handleSubmit(e) {
+  e.preventDefault();
+  var name = document.querySelector('#contact form #name').value;
+  var email = document.querySelector('#contact form #email').value;
+  var message = document.querySelector('#contact form #message').value;
+
+  // Todo: send via http call to backend
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Contact);
 
 /***/ })
 /******/ ]);

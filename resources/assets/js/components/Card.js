@@ -1,12 +1,17 @@
-import React, { Componrnt } from 'react';
+import React from 'react';
 
 const Card = (props) => {
+  const { heading, content, buttonText, image } = props.data;
+
   return (
-    <div className="col-md-4">
-      <h2>{props.data.heading}</h2>
-      <p>{props.data.content}</p>
-      <p><a className="btn btn-default" href="#" role="button">{props.data.buttonText}</a></p>
-    </div>
+      <div id="card" className="col-md-4 card">
+        <img className="img-responsive" src={image} alt={heading}/>
+        <div className="container">
+          <h4><b>{heading}</b></h4>
+          <p>{content}</p>
+          <p><button>{buttonText}</button></p>
+        </div>
+      </div>
   );
 };
 

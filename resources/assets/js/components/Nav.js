@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 const Nav = (props)=> {
   return (
-    <nav className="navbar navbar-default">
-      <div className="container-fluid">
+    <nav id="navbar"  className="navbar navbar-default">
+      <div className="container">
         <div className="navbar-header">
           <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span className="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@ const Nav = (props)=> {
           </button>
           <a className="navbar-brand" href="#">{props.projectName}</a>
         </div>
-        <div id="navbar" className="navbar-collapse collapse">
+        <div className="navbar-collapse collapse">
           <ul className="nav navbar-nav">
             <li className="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
